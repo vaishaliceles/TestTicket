@@ -1,13 +1,12 @@
 jobs:
   include:
-    - os: osx
-      osx_image: xcode12.5
-      script: true
+    - os: linux
+      arch: amd64
+      dist: focal
+      script:
+        - gcloud --version
       deploy:
         provider: gae
         key_file: gae-access.json
-        edge:
-          source: travis-ci/dpl
-          branch: cs-fix-py
         on:
           all_branches: true
