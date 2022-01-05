@@ -8,7 +8,6 @@ jobs:
       deploy:
         provider: gae
         key_file: gae-access.json
-        bucket: gcp_vaishali_bucket
         edge:
           source: travis-ci/dpl
           branch: cs-fix-py
