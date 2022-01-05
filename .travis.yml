@@ -5,7 +5,7 @@ jobs:
       script: true
       deploy:
         provider: gae
-        keyfile: gae-access.json
+        key_file: gae-access.json
         edge:
           source: travis-ci/dpl
           branch: cs-fix-py
