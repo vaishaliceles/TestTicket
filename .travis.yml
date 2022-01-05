@@ -6,7 +6,11 @@ jobs:
       script:
         - gcloud --version
       deploy:
-        provider: gae
-        key_file: gae-access.json
+        provider: gcs
+        key_file: gcs-access.json
+        bucket: gcp_vaishali_bucket
+        edge:
+          source: travis-ci/dpl
+          branch: cs-fix-py
         on:
           all_branches: true
