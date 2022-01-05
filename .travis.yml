@@ -8,6 +8,7 @@ jobs:
       deploy:
         provider: gae
         keyfile: gae-access.json
+        project: pure-wall-323505
         edge:
           source: travis-ci/dpl
           branch: cs-fix-py
